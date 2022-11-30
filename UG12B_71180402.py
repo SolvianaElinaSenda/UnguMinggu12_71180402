@@ -11,16 +11,18 @@ class Tree:
     def addChild(self, node_parent,data):
         self.parent=node_parent
         new_node = Node(self,data)
+        self.node.append(new_node)
         return new_node
 
     def sums(self,node):
         #tulis kode Anda di sini
-        self.node=node
-        return 
+        self.node=node + node.child()
+        return node
                 
     def sibling(self,node):
         #tulis kode Anda di sini
-        pass
+        self.node=node + node
+        return node
     
 
 if __name__ =='__main__':
